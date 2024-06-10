@@ -27,7 +27,7 @@ NB: startTimestamp and endTimestamp are required for this endpoint.
 
 ### Challenges faced and approach
 1.
-- Probliem: The inability to query blockchain directly with timestamps was the first issue i faced. The blockchain cannot be queried with the timestamps but can be queried with blockNumber. I needed to do a couple of data checking and manipulation in my implementation to be able to get the timestamp. Initially, i used a binary search to get this timestamps and saw that it would take approximately 26 runs to get them indicating 26 calls to the blockchain. It was very slow because i still needed to fetch the actual transaction.
+- Problem: The inability to query blockchain directly with timestamps was the first issue i faced. The blockchain cannot be queried with the timestamps but can be queried with blockNumber. I needed to do a couple of data checking and manipulation in my implementation to be able to get the timestamp. Initially, i used a binary search to get this timestamps and saw that it would take approximately 26 runs to get them indicating 26 calls to the blockchain. It was very slow because i still needed to fetch the actual transaction.
 
 - Final Approach: I used a package to make this faster so i wouldn't need to traverse the blocks from inception till current.
 
